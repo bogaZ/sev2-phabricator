@@ -1,0 +1,17 @@
+/**
+ * @provides refactory-suite-css
+ */
+body {
+  background: #020202;
+}
+
+.legalpad,
+.legalpad .phui-document-view .phui-document-content {
+  background-color: #020202 !important;
+}
+.legalpad .phui-header-header,
+.legalpad .phui-header-subheader,
+.phui-document-content-view > .phabricator-remarkup p,
+.phui-document-content-view > .phabricator-remarkup ol {
+  color:#ffffff !important;
+}

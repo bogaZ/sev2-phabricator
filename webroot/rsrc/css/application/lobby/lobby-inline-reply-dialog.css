@@ -1,0 +1,15 @@
+/**
+ * @provides phabricator-lobby-inline-reply-dialog-css
+ */
+
+.lobby-dialog-unread-messages {
+  max-height: 350px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.lobby-inline-reply-dialog .aphront-form-input {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}

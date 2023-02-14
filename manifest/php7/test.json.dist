@@ -1,0 +1,74 @@
+{
+  "storage.default-namespace": "sev2app",
+  "sev2.workspace": "baz",
+  "sev2.admin-email": "baz@refactory.id",
+  "sev2.oauth": {},
+  "storage.local-disk.path": "/var/phab-storage",
+  "log.access.path": "/var/log/phabricator.log",
+  "cluster.mailers": [],
+  "phabricator.timezone": "Asia/Jakarta",
+  "mysql.pass": "password",
+  "mysql.user": "sev2",
+  "mysql.host": "127.0.0.1",
+  "mysql.port": "3306",
+  "phabricator.base-uri" : "https://baz.sev-2.com",
+  "phd.user": "root",
+  "pygments.enabled": true,
+  "notification.servers": [
+    {
+      "type": "client",
+      "host": "baz.sev-2.com",
+      "port": 443,
+      "protocol": "https",
+      "path": "/ws/"
+    },
+    {
+      "type": "admin",
+      "host": "0.0.0.0",
+      "port": 22281,
+      "protocol": "http"
+    }
+  ],
+  "phabricator.uninstalled-applications" : {
+    "PhabricatorAlmanacApplication": true,
+    "PhabricatorDashboardApplication": true,
+    "PhabricatorDifferentialApplication": true,
+    "PhabricatorDiffusionApplication": true,
+    "PhabricatorDivinerApplication": true,
+    "PhabricatorDrydockApplication": true,
+    "PhabricatorGuideApplication": true,
+    "PhabricatorHarbormasterApplication": true,
+    "PhabricatorJobApplication": true,
+    "PhabricatorMultimeterApplication": true,
+    "PhabricatorNuanceApplication": true,
+    "PhabricatorOAuthServerApplication": true,
+    "PhabricatorPackagesApplication": true,
+    "PhabricatorPhluxApplication": true,
+    "PhabricatorPholioApplication": true,
+    "PhabricatorPhortuneApplication": true,
+    "PhabricatorPhragmentApplication": true,
+    "PhabricatorRalephApplication": true,
+    "PhabricatorSuiteApplication": true,
+    "PhabricatorUIExamplesApplication": true
+  },
+  "maniphest.points": {
+    "enabled": true,
+    "label": "Story Points",
+    "action": "Update Story Point"
+  },
+  "files.viewable-mime-types": {
+    "image/jpeg": "image/jpeg",
+    "image/jpg": "image/jpg",
+    "image/png": "image/png",
+    "image/gif": "image/gif",
+    "text/plain": "text/plain; charset=utf-8",
+    "text/x-diff": "text/plain; charset=utf-8",
+    "image/x-ico": "image/x-icon",
+    "image/x-icon": "image/x-icon",
+    "image/vnd.microsoft.icon": "image/x-icon",
+    "audio/x-wav": "audio/x-wav",
+    "application/ogg": "application/ogg",
+    "audio/mpeg": "audio/mpeg",
+    "text/x-php": "text/x-php"
+  }
+}

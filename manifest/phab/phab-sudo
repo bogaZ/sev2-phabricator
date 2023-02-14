@@ -1,0 +1,1 @@
+git ALL=(ALL) SETENV: NOPASSWD: /usr/bin/ssh, /usr/bin/git, /usr/bin/git-upload-pack, /usr/bin/git-receive-pack

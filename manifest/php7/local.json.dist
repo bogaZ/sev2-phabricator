@@ -1,0 +1,87 @@
+{
+  "sev2.workspace": "foo",
+  "sev2.admin-email": "foo@bar.com",
+  "sev2.oauth": ${OAUTH_DATA}
+  "cluster.mailers": [
+    {
+    "key": "phab-smtp",
+    "type": "smtp",
+    "options": {
+    "host": "smtp.mailtrap.io",
+    "port": 2525,
+    "user": "ebc256fff4e161",
+    "password": "c36074839e05cd",
+    "protocol" : "tls"
+    }
+  }
+  ],
+  "phabricator.timezone": "Asia/Jakarta",
+  "security.alternate-file-domain": "${WORKSPACE_BASE_URI}",
+  "mysql.pass": "${MYSQL_ROOT_PASSWORD}",
+  "mysql.user": "${MYSQL_ROOT_USER}",
+  "mysql.host": "${MYSQL_HOST}",
+  "mysql.port": "${MYSQL_PORT}",
+  "phabricator.base-uri" :"${WORKSPACE_BASE_URI}",
+  "phd.user": "root",
+  "pygments.enabled": true,
+  "storage.local-disk.path": "/data",
+  "storage.default-namespace": "${WORKSPACE_NAME}",
+  "notification.servers": [
+    {
+      "type": "client",
+      "host": "${WORKSPACE_BASE_URI}",
+      "port": 443,
+      "protocol": "https",
+      "path": "/ws/"
+    },
+    {
+      "type": "admin",
+      "host": "0.0.0.0",
+      "port": 22281,
+      "protocol": "http"
+    }
+  ],
+  "maniphest.points": {
+    "enabled": true,
+    "label": "Story Points",
+    "action": "Update Story Point"
+  },
+  "files.viewable-mime-types": {
+    "image/jpeg": "image/jpeg",
+    "image/jpg": "image/jpg",
+    "image/png": "image/png",
+    "image/gif": "image/gif",
+    "text/plain": "text/plain; charset=utf-8",
+    "text/x-diff": "text/plain; charset=utf-8",
+    "image/x-ico": "image/x-icon",
+    "image/x-icon": "image/x-icon",
+    "image/vnd.microsoft.icon": "image/x-icon",
+    "audio/x-wav": "audio/x-wav",
+    "application/ogg": "application/ogg",
+    "audio/mpeg": "audio/mpeg",
+    "text/x-php": "text/x-php"
+  },
+  "phabricator.uninstalled-applications" : {
+  "PhabricatorDashboardApplication": true,
+    "PhabricatorDifferentialApplication": true,
+    "PhabricatorDiffusionApplication": true,
+    "PhabricatorPholioApplication": true,
+    "PhabricatorAlmanacApplication": true,
+    "PhabricatorDivinerApplication": true,
+    "PhabricatorJobApplication": true,
+    "PhabricatorGuideApplication": true,
+    "PhabricatorDrydockApplication": true,
+    "PhabricatorHarbormasterApplication": true,
+    "PhabricatorNuanceApplication": true,
+    "PhabricatorMultimeterApplication": true,
+    "PhabricatorOAuthServerApplication": true,
+    "PhabricatorPackagesApplication": true,
+    "PhabricatorSuiteApplication": true,
+    "PhabricatorPhluxApplication": true,
+    "PhabricatorPholioApplication": true,
+    "PhabricatorPhortuneApplication": true,
+    "PhabricatorPhragmentApplication": true,
+    "PhabricatorRalephApplication": true,
+    "PhabricatorUIExamplesApplication": true
+  }
+}

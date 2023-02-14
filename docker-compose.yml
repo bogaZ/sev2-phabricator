@@ -1,0 +1,47 @@
+version: "2"
+
+services:
+  php:
+    build: ./
+    image: 'refactory/docker-phabricator-php7'
+    environment:
+      - MYSQL_ROOT_PASSWORD=r3f4ct0ry
+      - MYSQL_ROOT_USER=refactory
+      - MYSQL_HOST=192.168.1.17
+      - MYSQL_PORT=3306
+      - PHABRICATOR_BASE_URI=http://phabricator.mydomain.net/
+      - ALTERNATE_FILE_DOMAIN=https://dn9qobbfc75i5.cloudfront.net
+    volumes:
+      - phabricator-data:/srv
+      - phabricator-files:/data
+      - phabricator-repo:/repo
+    networks:
+      - back
+
+  web:
+    build: ./manifest/nginx
+    image: 'refactory/docker-phabricator-nginx'
+    depends_on:
+      - php
+    volumes:
+      - phabricator-data:/srv:ro
+      - phabricator-files:/data:ro
+    ports:
+      - '80:80'
+    networks:
+      - back
+      - front
+
+volumes:
+  phabricator-data:
+    driver: local
+  phabricator-files:
+    driver: local
+  phabricator-repo:
+    driver: local
+
+networks:
+  front:
+    driver: bridge
+  back:
+    driver: bridge

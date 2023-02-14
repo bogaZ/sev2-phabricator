@@ -1,0 +1,666 @@
+/**
+ * @provides phabricator-lobby-conpherence-css
+ */
+
+.phabricator-side-right {
+  width: auto !important;
+  position: fixed !important;
+  padding-right: 0px !important;
+  padding-top: 0px !important;
+  right: 0;
+  height: 100%;
+  background-color: {$page.sidenav} !important;
+}
+
+.phabricator-side-right .phui-list-item-href {
+  text-align: center;
+}
+
+.phabricator-side-right .phui-list-item-icon {
+  font-size: 15px;
+  padding: 16px 8px 16px 8px;
+}
+
+.device-desktop .phabricator-side-right .phui-list-item-selected .phui-list-item-icon {
+  color: {$anchor} !important;
+}
+.device-desktop .phui-basic-nav .phabricator-side-right a.phui-list-item-href:hover,
+.device-desktop .phui-basic-nav .phabricator-side-right .phui-list-item-selected {
+  background-color: rgba({$alphawhite},.04) !important;
+  border-radius:0;
+}
+
+
+.lobby-container {
+  display: table;
+  width: 100%
+}
+
+.lobby-container .phui-big-info-view  {
+  background-color: inherit;
+}
+
+.lobby-container .phui-big-info-title  {
+  font-size: 16px;
+}
+
+.lobby-box,
+.lobby-chat-container,
+.lobby-utility-container {
+  display: table-cell;
+}
+
+.lobby-box {
+  width: 60%;
+}
+
+.lobby-box-header-container,
+.lobby-box-body-container,
+.lobby-box-footer-container {
+  position:absolute;
+  z-index: 3;
+}
+
+.lobby-box-header-container {
+  top: 44px;
+  right: 40%;
+  left: 0;
+  height: 54px;
+  border-bottom: 1px solid {$thingreyborder};
+}
+
+.lobby-box-header-container .lobby-box-members,
+.lobby-box-header-container .phui-header-shell {
+    display: inline-block;
+}
+
+.lobby-box-header-container .phui-header-header,
+.lobby-box-header-container .phui-header-subheader {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 400px;
+}
+
+.lobby-box-header-container .phui-badge-flex-view.ml {
+  margin: 4px;
+}
+
+.lobby-box-header-container .lobby-box-members {
+    border-bottom: 0;
+    overflow: hidden;
+    max-height: 40px;
+    width: 50%;
+    margin-left: -17px;
+    text-align: right;
+}
+
+.lobby-box-header-container .lobby-box-members .lobby-members-last-item {
+  line-height: 40px;
+}
+
+.lobby-members-last-item .lobby-members-leftover{
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    font-size: 11px;
+}
+
+.lobby-box-header-container .phui-header-shell {
+    border-bottom: 0;
+    overflow: hidden;
+    padding: 4px 4px 4px 10px;
+    width: 50%;
+}
+
+.lobby-box-header-container .phui-header-subheader {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.lobby-box-header-container .phui-header-image {
+  background-size: cover;
+  width: 44px;
+  height: 44px;
+}
+
+.lobby-box-body-container {
+  top: 98px;
+  right: 40%;
+  left: 0;
+  bottom: 84px;
+  border-bottom: 1px solid {$thingreyborder};
+}
+
+.lobby-box-body-container .phui-icon-circle.circle-large {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+}
+
+.lobby-box-body-container .phui-icon-circle.circle-large .lobby-circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    background-size: contain;
+}
+
+.lobby-box-body-container .members {
+  margin: 30px;
+}
+
+.lobby-box-footer-container {
+  bottom: 0;
+  right: 40%;
+  left: 0;
+  height: 84px;
+  text-align: center;
+}
+
+.lobby-box-footer-container .phui-button-bar .button {
+  margin: 20px 8px 0 8px;
+}
+
+.lobby-box-footer-container .phui-button-bar .button .phui-icon-view {
+  margin: 12px 0 12px;
+}
+
+.lobby-box-footer-container .phui-button-bar .button {
+  border-radius: 36px;
+  height: 36px;
+  width: 36px;
+  padding: 0;
+}
+
+.device .lobby-box-header-container,
+.device .lobby-box-body-container {
+  display: none;
+}
+
+.device .lobby-box-footer-container {
+  bottom: 12px;
+  right: 8px;
+  left: auto;
+  height: 44px;
+  width: 44px;
+}
+
+.device .lobby-box-footer-container .phui-button-bar .button {
+  display: none;
+}
+
+.device .lobby-box-footer-container .phui-button-bar .phui-button-bar-first {
+  display: block;
+  margin-top: 0!important;
+}
+
+.device-desktop .lobby-utility-container,
+.lobby-chat-container {
+  position: fixed;
+  left: 60%;
+  width: 40%;
+  border-left: 1px solid {$thingreyborder};
+  top: 44px;
+  bottom: 0;
+  background: {$page.content};
+}
+
+.device-desktop .lobby-utility-container,
+.device-desktop .lobby-chat-container {
+  right: 0;
+  width: auto;
+}
+
+
+.show-lobby-sidebar .lobby-utility-container {
+  display: block;
+}
+
+.lobby-utility-container {
+  display: none;
+  z-index: 1;
+  top: 44px;
+  bottom: 0;
+  position: absolute;
+  background: {$page.background};
+}
+
+.device .lobby-utility-container {
+  display: none !important;
+  /* width: 50%; */
+}
+
+.lobby-utility {
+  padding-top: 16px;
+}
+
+.lobby-utility .mlt{
+  margin-top: 0;
+}
+
+.lobby-utility-body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.lobby-utility-body .mlr,
+.lobby-utility-body .mll {
+  margin: 0;
+}
+
+.lobby-utility-body .phui-box-border {
+  border-radius: 0;
+  border:0;
+}
+
+.lobby-edge .phui-icon-view {
+  display: inline-block !important;
+  position: absolute;
+  top: 4px !important;
+  left: 12px !important;
+  margin: 0;
+}
+.device .lobby-edge .phui-icon-view {
+  left: 6px !important;
+}
+
+.lobby-utility-body .button.has-text .phui-icon-view {
+  display: inline-block;
+  position: absolute;
+  top: 4px;
+  left: 12px;
+  margin: 0;
+}
+
+.lobby-utility-loading {
+  font-size: 14px;
+  line-height: 40px;
+}
+
+.lobby-utility-body .lobby-utility-loading {
+  padding: 30px;
+}
+
+.device .lobby-box,
+.device .lobby-utility-container,
+.device .lobby-chat-container {
+  position: inherit;
+  display: block;
+  width: 100%;
+}
+
+.lobby-utility,
+.lobby-chat {
+  position: relative;
+  left: 0px;
+  margin-right: 58px;
+  height: auto;
+}
+
+.device .lobby-utility,
+.device .lobby-chat {
+  margin-right: 0px;
+}
+
+.lobby-chat-main-column {
+  display: block;
+}
+
+.device .lobby-chat {
+  top:36px;
+}
+
+.lobby-chat .mlt {
+    margin-top: 0px;
+}
+
+.lobby-chat .mlr {
+    margin-right: 0px;
+}
+.lobby-chat .mll {
+    margin-left: 0px;
+}
+
+.lobby-chat .phui-box-border {
+  border-radius: 0;
+  border: none;
+  background-color: inherit;
+}
+
+.lobby-chat .phui-box-border {
+  border-radius: 0;
+  background-color: inherit;
+}
+
+.device .lobby-chat .phui-object-box {
+  margin: 0;
+}
+
+
+/**
+ * @provides conpherence-durable-column-view
+ */
+.lobby-chat-container .conpherence-durable-column-header {
+ border-radius: 0 !important;
+ background-color: {$level-bg};
+ padding: 10px 0 10px 0;
+}
+
+.lobby-chat-container .conpherence-durable-column-header:hover {
+  background-color: {$level-bg};
+  pointer:none;
+}
+.lobby-chat-container .conpherence-durable-column-header
+.phabricator-application-menu .phui-list-item-icon.phui-font-fa {
+  color: {$darkgreytext};
+}
+
+.lobby-chat-container .conpherence-durable-column-header
+.phabricator-application-menu .phui-list-item-icon.phui-font-fa:hover {
+  color: {$anchor} !important;
+}
+
+.device .lobby-chat-container .conpherence-durable-column-header {
+ display: none;
+}
+
+.lobby-chat-container .conpherence-durable-column-header .phabricator-application-menu {
+ margin-right: 8px;
+ float:left;
+}
+
+.global-upload-mask {
+  pointer-events: none;
+}
+
+.device .conpherence-durable-column,
+.printable .conpherence-durable-column,
+!print .lobby-chat-container{
+  /* display: none; */
+}
+
+.lobby-chat-container.conpherence-transaction-image {
+  float: left;
+  border-radius: 3px;
+  height: 24px;
+  width: 24px;
+  background-size: 24px;
+  position: absolute;
+  top: 5px;
+}
+
+.device-desktop .conpherence-durable-column.loading .loading-mask {
+  display: block;
+}
+
+.conpherence-durable-column-header .conpherence-settings-dropdown {
+  z-index: 1;
+}
+
+.conpherence-durable-column-header  .phabricator-application-menu
+  .phui-list-item-name {
+    display: none;
+}
+
+.conpherence-durable-column-header .aphlict-connection-status {
+  width: 6px;
+  float: left;
+  height: 18px;
+  margin-left: 10px;
+  margin-top: 8px;
+}
+
+.conpherence-durable-column-header .aphlict-connection-status
+  .connection-status-text {
+    display: none;
+}
+
+.conpherence-durable-column-header .aphlict-connection-status
+  .phui-icon-view {
+    font-size: 10px;
+}
+
+.device-desktop .conpherence-durable-column-header .phabricator-application-menu
+  .phui-list-item-view {
+    margin: 0;
+    width: 28px;
+    height: 34px;
+    min-width: 28px;
+}
+
+.device-desktop .conpherence-durable-column-header .phabricator-application-menu
+  .phui-list-item-href {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.conpherence-durable-column-header
+  .phabricator-main-menu-dropdown.phui-list-sidenav {
+    top: 30px;
+}
+
+.lobby-chat-container .conpherence-durable-column-header-text {
+  float: left;
+  padding: 8px 0 8px 0;
+  color: {$darkgreytext};
+  width: 260px;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-shadow: none !important;
+}
+
+.conpherence-durable-column-header .phabricator-application-menu
+  .phui-list-item-icon.phui-font-fa {
+    font-size: 15px;
+    margin: 0;
+    height: 15px;
+    width: 15px;
+    padding: 10px 8px 10px 8px;
+}
+
+.lobby-chat{
+  position: absolute;
+  top: 54px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background:{$page.content};
+}
+
+.lobby-chat-container .conpherence-durable-column-main {
+  position: absolute;
+  top: 0;
+  bottom: 60px !important;
+  left: 0 !important;
+  right: 0;
+  overflow-x: hidden;
+}
+
+.lobby-chat-container.column-no-rooms {
+  padding: 12px 8px;
+}
+
+.lobby-chat-container.column-no-rooms-text {
+  color: {$greytext};
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.conpherence-durable-column-transactions {
+  padding: 8px 12px 0;
+}
+
+.conpherence-durable-column-transactions .conpherence-transaction-view {
+  background: none;
+  margin: 0;
+  padding: 4px 0;
+  min-height: 0;
+}
+
+.conpherence-durable-column-transactions .conpherence-transaction-view
+  .conpherence-message {
+    word-wrap: break-word;
+}
+
+.device .lobby-chat-container .conpherence-durable-column-transactions
+  .conpherence-transaction-view .conpherence-transaction-detail {
+    border: 0;
+    margin-left: 34px;
+}
+.lobby-chat-container .conpherence-durable-column-transactions
+  .conpherence-transaction-view .conpherence-transaction-detail {
+    border-width: 0;
+    margin-left: 45px;
+}
+
+.conpherence-durable-column-transactions .conpherence-transaction-view
+  .conpherence-transaction-detail .conpherence-transaction-header {
+    background: none;
+    padding: 0 0 2px 0;
+}
+
+.conpherence-durable-column-transactions
+  .conpherence-transaction-view.date-marker {
+    margin: 12px 0 0;
+}
+
+.conpherence-durable-column-transactions
+  .conpherence-transaction-view.date-marker .date {
+    left: 0;
+    font-size: {$normalfontsize};
+    top: -10px;
+    padding: 0 6px 0 0;
+}
+
+.conpherence-durable-column-transactions
+.conpherence-transaction-detail
+.conpherence-transaction-content
+.phui-pinboard-item-view {
+  width: 273px;
+}
+
+.conpherence-durable-column-transactions
+.conpherence-transaction-detail
+.conpherence-transaction-content
+.phui-pinboard-item-view
+.phui-pinboard-item-image-link
+img {
+  width: 265px;
+  height: 199px;
+}
+
+.conpherence-durable-column-transactions .conpherence-transaction-detail
+  .conpherence-transaction-content {
+    padding: 0 0 8px 0;
+}
+
+.device .lobby-chat-container .conpherence-room-status {
+    display: block;
+}
+
+.lobby-chat-container .pontificate-container {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.lobby-chat-container .remarkup-assist-bar {
+  position: absolute;
+  width: 24px;
+  background: {$bluebackground};
+  border-radius: 3px;
+}
+
+.lobby-chat-container .remarkup-assist-button,
+.lobby-chat-container .remarkup-assist-separator {
+  display: none;
+}
+
+.lobby-chat-container
+  .remarkup-assist-button.remarkup-assist-upload {
+    display: block;
+}
+
+.lobby-chat-container .phui-form-view {
+  left: 0;
+  height: 34px;
+  width: auto;
+}
+
+.lobby-chat-container .phui-form-view {
+  left: 0;
+  right: 0;
+  height: 34px;
+  width: auto;
+  padding: 0 16px 24px 10px;
+}
+
+.device .lobby-chat-container .phui-form-view {
+  padding: 0 60px 24px 10px;
+}
+
+.lobby-chat-container .phui-form-view
+  div.aphront-form-input {
+  margin: 0;
+  width: 100%;
+}
+
+.lobby-chat-container.aphront-form-control {
+  padding: 0;
+}
+
+.lobby-chat-container .remarkup-assist-textarea {
+  margin: 0;
+  padding: 7px 8px 6px 38px;
+  width: 100%;
+  height: 34px;
+  resize: none;
+  border-color: {$greyborder};
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.lobby-chat-container .aphront-form-control-submit {
+  padding: 0;
+  position: absolute;
+  top: -2px;
+  right: 12px;
+}
+
+.lobby-chat-container .aphront-form-control-textarea {
+  float: left;
+  height: 24px;
+  width: 100%;
+}
+
+.lobby-chat-container .conpherence-transaction-view.date-marker .date {
+    position: relative;
+    top: -11px;
+    background-color: {$page.content};
+    color: {$greyborder} !important;
+    font-weight: bold;
+}
+
+.lobby-chat-container .phabricator-main-menu-dropdown.phui-list-sidenav {
+    background: {$page.content};
+}
+
+.device-desktop .conpherence-menu .conpherence-menu-item-view:hover {
+  background-color: rgba({$alphablack},0.05);
+}

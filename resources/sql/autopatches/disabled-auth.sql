@@ -1,0 +1,3 @@
+use {$NAMESPACE}_auth;
+INSERT INTO `{$WORKSPACE}_auth_providerconfig` VALUES (1,_binary 'PHID-AUTH-ueapi4xy3xjm3vsusvks','PhabricatorGoogleAuthProvider','google','google.com',0,1,1,1,1,0,'{\"oauth:app:id\":\"880031470841-v4fpp4j14ghti5n8ar7pf54cmqsaugvg.apps.googleusercontent.com\",\"oauth:app:secret\":\"calbJRttpZ6tkeB05DaR5-ED\",\"oauth:app:note\":\"Gsuite\"}',1611876832,1611877846,0);
+INSERT INTO `{$WORKSPACE}_auth_providerconfig` VALUES (2,_binary 'PHID-AUTH-ueapi4xy3xjm3vsusvkt','PhabricatorAppleAuthProvider','apple','appleid.apple.com',0,1,1,1,1,0,'{\"oauth:app:id\":\"880031470841-v4fpp4j14ghti5n8ar7pf54cmqsaugvg.apps.googleusercontent.com\",\"oauth:app:secret\":\"calbJRttpZ6tkeB05DaR5-ED\",\"oauth:app:note\":\"Gsuite\"}',1611876832,1611877846,0);

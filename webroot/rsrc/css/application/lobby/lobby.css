@@ -1,0 +1,108 @@
+/**
+ * @provides phabricator-lobby-css
+ */
+.phui-badge-owner {
+  vertical-align: bottom !important;
+  text-align: left !important;
+}
+
+.phui-icon-inside-badge {
+ border: 1px solid #ffffff !important;
+ color: #ffffff !important;
+ border-radius: 24px;
+ height: 24px;
+ width: 24px;
+ text-align: center;
+ display: inline-block;
+ cursor: pointer;
+ background-color: #020202;
+ padding: 0;
+ position: relative;
+ font-size: 14px;
+ line-height: 23px !important;
+ margin-bottom: 10px;
+ margin-left: 10px;
+}
+
+
+.phui-icon-inside-badge.red {
+  border: 1px solid #c0392b !important;
+  color:#c0392b !important;
+}
+
+.homepage-main-panel .phui-hovercard-container {
+  box-shadow: none;
+}
+
+.homepage-main-panel .phui-hovercard-wrapper,
+.homepage-main-panel .phui-hovercard-tail {
+  width: 100% !important;
+}
+
+.device-desktop .homepage-side-panel .phui-oi-col2,
+.device-tablet .homepage-side-panel .phui-oi-col2 {
+    display: table-cell !important;
+}
+
+.device-tablet .homepage-side-panel .phui-oi-col2,
+.device-phone .homepage-side-panel .phui-oi-col2 {
+    display: block !important;
+}
+
+.device-desktop .homepage-main-panel .aphront-multi-column-outer div.aphront-multi-column-column-outer {
+  width: 100%;
+  margin-bottom: 16px;
+  margin-right: 0px;
+}
+
+.device-desktop .homepage-main-panel .mmr {
+  margin-right: 20px;
+}
+
+.device-tablet .homepage-main-panel .mmr,
+.device .homepage-main-panel .mmr,
+.homepage-main-panel .aphront-multi-colum-column-outer-last .mmr {
+  margin-right: 2px;
+}
+
+.homepage-main-panel .ml {
+  margin: 16px 0 16px 0;
+}
+
+.device-phone .homepage-main-panel .mmr,
+.device-phone .homepage-main-panel .ml {
+  margin: 16px 0 16px 0;
+}
+
+.conpherence-message-pane .conpherence-messages {
+    top: 114px !important;
+}
+
+.conpherence-message-pane, .loading .messages-loading-mask,
+.loading .messages-loading-icon,
+.conpherence-layout .conpherence-no-threads {
+    top: 114px !important;
+}
+
+.conpherence-participant-pane {
+    top: 114px !important;
+}
+
+.conpherence-participant-pane .widgets-body {
+    top: 115px !important;
+}
+
+.lobby-container {
+    padding: 5px;
+    display: flex;
+}
+
+.lobby-vid {
+    padding: 5px;
+    flex: 0 1 auto;
+    height: 180px;
+}
+
+.conpherence-header-pane .phui-header-col2 {
+    width: 50% !important;
+}

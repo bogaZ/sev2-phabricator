@@ -1,0 +1,2 @@
+use {$NAMESPACE}_pastebin;
+
